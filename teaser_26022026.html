@@ -927,6 +927,9 @@ function upTable(){
   document.getElementById('va_price').className='val-price'+(aOn?'':' inactive');
   setHTML('va_badge',`<span class="val-add-badge ${aOn?'':'off'}">${aOn?'פעיל ✓':'לא פעיל'}</span>`);
 
+  // Update trans price badge on addon toggle row
+  set('trans_price_badge', '+$'+T.transPrice);
+
   // Row 4: Transcription
   const tOn=pizza.trans;
   document.getElementById('vr_trans').className='val-row '+(tOn?'active':'inactive');
